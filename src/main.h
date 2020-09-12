@@ -10,5 +10,4 @@
 
 extern uint8_t debug;
 
-
 #endif /* MAIN_H_ */

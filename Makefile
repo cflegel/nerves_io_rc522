@@ -1,12 +1,12 @@
 # Variables to override
 #
 # CC            C compiler
-# CROSSCOMPILE	crosscompiler prefix, if any
-# CFLAGS	compiler flags for compiling all C files
-# ERL_CFLAGS	additional compiler flags for files using Erlang header files
+# CROSSCOMPILE  crosscompiler prefix, if any
+# CFLAGS        compiler flags for compiling all C files
+# ERL_CFLAGS    additional compiler flags for files using Erlang header files
 # ERL_EI_LIBDIR path to libei.a
-# LDFLAGS	linker flags for linking all binaries
-# ERL_LDFLAGS	additional linker flags for projects referencing Erlang libraries
+# LDFLAGS       linker flags for linking all binaries
+# ERL_LDFLAGS   additional linker flags for projects referencing Erlang libraries
 
 # Check that we're on a supported build platform
 ifeq ($(CROSSCOMPILE),)
@@ -22,10 +22,10 @@ ERL_EI_INCLUDE_DIR ?= $(shell find $(ERL_BASE_DIR) -name ei.h -printf '%h\n' 2> 
 ERL_EI_LIBDIR ?= $(shell find $(ERL_BASE_DIR) -name libei.a -printf '%h\n' 2> /dev/null | head -1)
 
 ifeq ($(ERL_EI_INCLUDE_DIR),)
-   $(error Could not find include directory for ei.h. Check that Erlang header files are available)
+    $(error Could not find include directory for ei.h. Check that Erlang header files are available)
 endif
 ifeq ($(ERL_EI_LIBDIR),)
-   $(error Could not find libei.a. Check your Erlang installation)
+    $(error Could not find libei.a. Check your Erlang installation)
 endif
 
 # Set Erlang-specific compile and linker flags
@@ -41,11 +41,11 @@ CC ?= $(CROSSCOMPILER)gcc
 all: priv/rc522
 
 %.o: %.c
-	$(CC) -c $(ERL_CFLAGS) $(CFLAGS) -o $@ $<
+    $(CC) -c $(ERL_CFLAGS) $(CFLAGS) -o $@ $<
 
 priv/rc522: src/main.o src/bcm2835.o src/rc522.o src/rfid.o
-	@mkdir -p priv
-	$(CC) $^ $(ERL_LDFLAGS) $(LDFLAGS) -o $@
+    @mkdir -p priv
+    $(CC) $^ $(ERL_LDFLAGS) $(LDFLAGS) -o $@
 
 clean:
-	rm -f priv/rc522 src/*.o
+    rm -f priv/rc522 src/*.o

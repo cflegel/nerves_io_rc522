@@ -1,8 +1,8 @@
 /*
  * rfid.c
  *
- *  Created on: 06.09.2013
- *      Author: alexs
+ * Created on: 06.09.2013
+ * Author: alexs
  */
 #include "rfid.h"
 

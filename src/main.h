@@ -1,8 +1,8 @@
 /*
  * main.h
  *
- *  Created on: 26.09.2013
- *      Author: alexs
+ * Created on: 26.09.2013
+ * Author: alexs
  */
 
 #ifndef MAIN_H_

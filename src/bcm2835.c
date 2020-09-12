@@ -1461,12 +1461,12 @@ int main(int argc, char **argv)
     /* Read input */
     while (1)
     {
-	/* Read some data */
-	uint8_t value = bcm2835_gpio_lev(RPI_GPIO_P1_15);
-	printf("read from pin 15: %d\n", value);
+    /* Read some data */
+    uint8_t value = bcm2835_gpio_lev(RPI_GPIO_P1_15);
+    printf("read from pin 15: %d\n", value);
 
-	/* wait a bit */
-	bcm2835_delay(500);
+    /* wait a bit */
+    bcm2835_delay(500);
     }
 #endif
 
@@ -1476,15 +1476,15 @@ int main(int argc, char **argv)
     */
     while (1)
     {
-	if (bcm2835_gpio_eds(RPI_GPIO_P1_15))
-	{
-	    /* Now clear the eds flag by setting it to 1 */
-	    bcm2835_gpio_set_eds(RPI_GPIO_P1_15);
-	    printf("low event detect for pin 15\n");
-	}
+    if (bcm2835_gpio_eds(RPI_GPIO_P1_15))
+    {
+        /* Now clear the eds flag by setting it to 1 */
+        bcm2835_gpio_set_eds(RPI_GPIO_P1_15);
+        printf("low event detect for pin 15\n");
+    }
 
-	/* wait a bit */
-	bcm2835_delay(500);
+    /* wait a bit */
+    bcm2835_delay(500);
     }
 #endif
 

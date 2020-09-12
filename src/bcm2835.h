@@ -573,14 +573,14 @@ extern volatile uint32_t *bcm2835_bsc1;
 */
 typedef enum
 {
-  BCM2835_REGBASE_ST = 1,   /*!< Base of the ST (System Timer) registers. */
-  BCM2835_REGBASE_GPIO = 2, /*!< Base of the GPIO registers. */
-  BCM2835_REGBASE_PWM = 3,  /*!< Base of the PWM registers. */
-  BCM2835_REGBASE_CLK = 4,  /*!< Base of the CLK registers. */
-  BCM2835_REGBASE_PADS = 5, /*!< Base of the PADS registers. */
-  BCM2835_REGBASE_SPI0 = 6, /*!< Base of the SPI0 registers. */
-  BCM2835_REGBASE_BSC0 = 7, /*!< Base of the BSC0 registers. */
-  BCM2835_REGBASE_BSC1 = 8  /*!< Base of the BSC1 registers. */
+    BCM2835_REGBASE_ST = 1,   /*!< Base of the ST (System Timer) registers. */
+    BCM2835_REGBASE_GPIO = 2, /*!< Base of the GPIO registers. */
+    BCM2835_REGBASE_PWM = 3,  /*!< Base of the PWM registers. */
+    BCM2835_REGBASE_CLK = 4,  /*!< Base of the CLK registers. */
+    BCM2835_REGBASE_PADS = 5, /*!< Base of the PADS registers. */
+    BCM2835_REGBASE_SPI0 = 6, /*!< Base of the SPI0 registers. */
+    BCM2835_REGBASE_BSC0 = 7, /*!< Base of the BSC0 registers. */
+    BCM2835_REGBASE_BSC1 = 8  /*!< Base of the BSC1 registers. */
 } bcm2835RegisterBase;
 
 /*! Size of memory page on RPi */
@@ -630,15 +630,15 @@ typedef enum
 */
 typedef enum
 {
-  BCM2835_GPIO_FSEL_INPT = 0x00, /*!< Input 0b000 */
-  BCM2835_GPIO_FSEL_OUTP = 0x01, /*!< Output 0b001 */
-  BCM2835_GPIO_FSEL_ALT0 = 0x04, /*!< Alternate function 0 0b100 */
-  BCM2835_GPIO_FSEL_ALT1 = 0x05, /*!< Alternate function 1 0b101 */
-  BCM2835_GPIO_FSEL_ALT2 = 0x06, /*!< Alternate function 2 0b110, */
-  BCM2835_GPIO_FSEL_ALT3 = 0x07, /*!< Alternate function 3 0b111 */
-  BCM2835_GPIO_FSEL_ALT4 = 0x03, /*!< Alternate function 4 0b011 */
-  BCM2835_GPIO_FSEL_ALT5 = 0x02, /*!< Alternate function 5 0b010 */
-  BCM2835_GPIO_FSEL_MASK = 0x07  /*!< Function select bits mask 0b111 */
+    BCM2835_GPIO_FSEL_INPT = 0x00, /*!< Input 0b000 */
+    BCM2835_GPIO_FSEL_OUTP = 0x01, /*!< Output 0b001 */
+    BCM2835_GPIO_FSEL_ALT0 = 0x04, /*!< Alternate function 0 0b100 */
+    BCM2835_GPIO_FSEL_ALT1 = 0x05, /*!< Alternate function 1 0b101 */
+    BCM2835_GPIO_FSEL_ALT2 = 0x06, /*!< Alternate function 2 0b110, */
+    BCM2835_GPIO_FSEL_ALT3 = 0x07, /*!< Alternate function 3 0b111 */
+    BCM2835_GPIO_FSEL_ALT4 = 0x03, /*!< Alternate function 4 0b011 */
+    BCM2835_GPIO_FSEL_ALT5 = 0x02, /*!< Alternate function 5 0b010 */
+    BCM2835_GPIO_FSEL_MASK = 0x07  /*!< Function select bits mask 0b111 */
 } bcm2835FunctionSelect;
 
 /*! \brief bcm2835PUDControl
@@ -646,9 +646,9 @@ typedef enum
 */
 typedef enum
 {
-  BCM2835_GPIO_PUD_OFF = 0x00,  /*!< Off ? disable pull-up/down 0b00 */
-  BCM2835_GPIO_PUD_DOWN = 0x01, /*!< Enable Pull Down control 0b01 */
-  BCM2835_GPIO_PUD_UP = 0x02    /*!< Enable Pull Up control 0b10  */
+    BCM2835_GPIO_PUD_OFF = 0x00,  /*!< Off ? disable pull-up/down 0b00 */
+    BCM2835_GPIO_PUD_DOWN = 0x01, /*!< Enable Pull Down control 0b01 */
+    BCM2835_GPIO_PUD_UP = 0x02    /*!< Enable Pull Up control 0b10  */
 } bcm2835PUDControl;
 
 /*! Pad control register offsets from BCM2835_GPIO_PADS */
@@ -674,9 +674,9 @@ typedef enum
 */
 typedef enum
 {
-  BCM2835_PAD_GROUP_GPIO_0_27 = 0,  /*!< Pad group for GPIO pads 0 to 27 */
-  BCM2835_PAD_GROUP_GPIO_28_45 = 1, /*!< Pad group for GPIO pads 28 to 45 */
-  BCM2835_PAD_GROUP_GPIO_46_53 = 2  /*!< Pad group for GPIO pads 46 to 53 */
+    BCM2835_PAD_GROUP_GPIO_0_27 = 0,  /*!< Pad group for GPIO pads 0 to 27 */
+    BCM2835_PAD_GROUP_GPIO_28_45 = 1, /*!< Pad group for GPIO pads 28 to 45 */
+    BCM2835_PAD_GROUP_GPIO_46_53 = 2  /*!< Pad group for GPIO pads 46 to 53 */
 } bcm2835PadGroup;
 
 /*! \brief GPIO Pin Numbers
@@ -695,85 +695,85 @@ typedef enum
 */
 typedef enum
 {
-  RPI_GPIO_P1_03 = 0,  /*!< Version 1, Pin P1-03 */
-  RPI_GPIO_P1_05 = 1,  /*!< Version 1, Pin P1-05 */
-  RPI_GPIO_P1_07 = 4,  /*!< Version 1, Pin P1-07 */
-  RPI_GPIO_P1_08 = 14, /*!< Version 1, Pin P1-08, defaults to alt function 0 UART0_TXD */
-  RPI_GPIO_P1_10 = 15, /*!< Version 1, Pin P1-10, defaults to alt function 0 UART0_RXD */
-  RPI_GPIO_P1_11 = 17, /*!< Version 1, Pin P1-11 */
-  RPI_GPIO_P1_12 = 18, /*!< Version 1, Pin P1-12, can be PWM channel 0 in ALT FUN 5 */
-  RPI_GPIO_P1_13 = 21, /*!< Version 1, Pin P1-13 */
-  RPI_GPIO_P1_15 = 22, /*!< Version 1, Pin P1-15 */
-  RPI_GPIO_P1_16 = 23, /*!< Version 1, Pin P1-16 */
-  RPI_GPIO_P1_18 = 24, /*!< Version 1, Pin P1-18 */
-  RPI_GPIO_P1_19 = 10, /*!< Version 1, Pin P1-19, MOSI when SPI0 in use */
-  RPI_GPIO_P1_21 = 9,  /*!< Version 1, Pin P1-21, MISO when SPI0 in use */
-  RPI_GPIO_P1_22 = 25, /*!< Version 1, Pin P1-22 */
-  RPI_GPIO_P1_23 = 11, /*!< Version 1, Pin P1-23, CLK when SPI0 in use */
-  RPI_GPIO_P1_24 = 8,  /*!< Version 1, Pin P1-24, CE0 when SPI0 in use */
-  RPI_GPIO_P1_26 = 7,  /*!< Version 1, Pin P1-26, CE1 when SPI0 in use */
+    RPI_GPIO_P1_03 = 0,  /*!< Version 1, Pin P1-03 */
+    RPI_GPIO_P1_05 = 1,  /*!< Version 1, Pin P1-05 */
+    RPI_GPIO_P1_07 = 4,  /*!< Version 1, Pin P1-07 */
+    RPI_GPIO_P1_08 = 14, /*!< Version 1, Pin P1-08, defaults to alt function 0 UART0_TXD */
+    RPI_GPIO_P1_10 = 15, /*!< Version 1, Pin P1-10, defaults to alt function 0 UART0_RXD */
+    RPI_GPIO_P1_11 = 17, /*!< Version 1, Pin P1-11 */
+    RPI_GPIO_P1_12 = 18, /*!< Version 1, Pin P1-12, can be PWM channel 0 in ALT FUN 5 */
+    RPI_GPIO_P1_13 = 21, /*!< Version 1, Pin P1-13 */
+    RPI_GPIO_P1_15 = 22, /*!< Version 1, Pin P1-15 */
+    RPI_GPIO_P1_16 = 23, /*!< Version 1, Pin P1-16 */
+    RPI_GPIO_P1_18 = 24, /*!< Version 1, Pin P1-18 */
+    RPI_GPIO_P1_19 = 10, /*!< Version 1, Pin P1-19, MOSI when SPI0 in use */
+    RPI_GPIO_P1_21 = 9,  /*!< Version 1, Pin P1-21, MISO when SPI0 in use */
+    RPI_GPIO_P1_22 = 25, /*!< Version 1, Pin P1-22 */
+    RPI_GPIO_P1_23 = 11, /*!< Version 1, Pin P1-23, CLK when SPI0 in use */
+    RPI_GPIO_P1_24 = 8,  /*!< Version 1, Pin P1-24, CE0 when SPI0 in use */
+    RPI_GPIO_P1_26 = 7,  /*!< Version 1, Pin P1-26, CE1 when SPI0 in use */
 
-  /* RPi Version 2 */
-  RPI_V2_GPIO_P1_03 = 2,  /*!< Version 2, Pin P1-03 */
-  RPI_V2_GPIO_P1_05 = 3,  /*!< Version 2, Pin P1-05 */
-  RPI_V2_GPIO_P1_07 = 4,  /*!< Version 2, Pin P1-07 */
-  RPI_V2_GPIO_P1_08 = 14, /*!< Version 2, Pin P1-08, defaults to alt function 0 UART0_TXD */
-  RPI_V2_GPIO_P1_10 = 15, /*!< Version 2, Pin P1-10, defaults to alt function 0 UART0_RXD */
-  RPI_V2_GPIO_P1_11 = 17, /*!< Version 2, Pin P1-11 */
-  RPI_V2_GPIO_P1_12 = 18, /*!< Version 2, Pin P1-12, can be PWM channel 0 in ALT FUN 5 */
-  RPI_V2_GPIO_P1_13 = 27, /*!< Version 2, Pin P1-13 */
-  RPI_V2_GPIO_P1_15 = 22, /*!< Version 2, Pin P1-15 */
-  RPI_V2_GPIO_P1_16 = 23, /*!< Version 2, Pin P1-16 */
-  RPI_V2_GPIO_P1_18 = 24, /*!< Version 2, Pin P1-18 */
-  RPI_V2_GPIO_P1_19 = 10, /*!< Version 2, Pin P1-19, MOSI when SPI0 in use */
-  RPI_V2_GPIO_P1_21 = 9,  /*!< Version 2, Pin P1-21, MISO when SPI0 in use */
-  RPI_V2_GPIO_P1_22 = 25, /*!< Version 2, Pin P1-22 */
-  RPI_V2_GPIO_P1_23 = 11, /*!< Version 2, Pin P1-23, CLK when SPI0 in use */
-  RPI_V2_GPIO_P1_24 = 8,  /*!< Version 2, Pin P1-24, CE0 when SPI0 in use */
-  RPI_V2_GPIO_P1_26 = 7,  /*!< Version 2, Pin P1-26, CE1 when SPI0 in use */
-  RPI_V2_GPIO_P1_29 = 5,  /*!< Version 2, Pin P1-29 */
-  RPI_V2_GPIO_P1_31 = 6,  /*!< Version 2, Pin P1-31 */
-  RPI_V2_GPIO_P1_32 = 12, /*!< Version 2, Pin P1-32 */
-  RPI_V2_GPIO_P1_33 = 13, /*!< Version 2, Pin P1-33 */
-  RPI_V2_GPIO_P1_35 = 19, /*!< Version 2, Pin P1-35 */
-  RPI_V2_GPIO_P1_36 = 16, /*!< Version 2, Pin P1-36 */
-  RPI_V2_GPIO_P1_37 = 26, /*!< Version 2, Pin P1-37 */
-  RPI_V2_GPIO_P1_38 = 20, /*!< Version 2, Pin P1-38 */
-  RPI_V2_GPIO_P1_40 = 21, /*!< Version 2, Pin P1-40 */
+    /* RPi Version 2 */
+    RPI_V2_GPIO_P1_03 = 2,  /*!< Version 2, Pin P1-03 */
+    RPI_V2_GPIO_P1_05 = 3,  /*!< Version 2, Pin P1-05 */
+    RPI_V2_GPIO_P1_07 = 4,  /*!< Version 2, Pin P1-07 */
+    RPI_V2_GPIO_P1_08 = 14, /*!< Version 2, Pin P1-08, defaults to alt function 0 UART0_TXD */
+    RPI_V2_GPIO_P1_10 = 15, /*!< Version 2, Pin P1-10, defaults to alt function 0 UART0_RXD */
+    RPI_V2_GPIO_P1_11 = 17, /*!< Version 2, Pin P1-11 */
+    RPI_V2_GPIO_P1_12 = 18, /*!< Version 2, Pin P1-12, can be PWM channel 0 in ALT FUN 5 */
+    RPI_V2_GPIO_P1_13 = 27, /*!< Version 2, Pin P1-13 */
+    RPI_V2_GPIO_P1_15 = 22, /*!< Version 2, Pin P1-15 */
+    RPI_V2_GPIO_P1_16 = 23, /*!< Version 2, Pin P1-16 */
+    RPI_V2_GPIO_P1_18 = 24, /*!< Version 2, Pin P1-18 */
+    RPI_V2_GPIO_P1_19 = 10, /*!< Version 2, Pin P1-19, MOSI when SPI0 in use */
+    RPI_V2_GPIO_P1_21 = 9,  /*!< Version 2, Pin P1-21, MISO when SPI0 in use */
+    RPI_V2_GPIO_P1_22 = 25, /*!< Version 2, Pin P1-22 */
+    RPI_V2_GPIO_P1_23 = 11, /*!< Version 2, Pin P1-23, CLK when SPI0 in use */
+    RPI_V2_GPIO_P1_24 = 8,  /*!< Version 2, Pin P1-24, CE0 when SPI0 in use */
+    RPI_V2_GPIO_P1_26 = 7,  /*!< Version 2, Pin P1-26, CE1 when SPI0 in use */
+    RPI_V2_GPIO_P1_29 = 5,  /*!< Version 2, Pin P1-29 */
+    RPI_V2_GPIO_P1_31 = 6,  /*!< Version 2, Pin P1-31 */
+    RPI_V2_GPIO_P1_32 = 12, /*!< Version 2, Pin P1-32 */
+    RPI_V2_GPIO_P1_33 = 13, /*!< Version 2, Pin P1-33 */
+    RPI_V2_GPIO_P1_35 = 19, /*!< Version 2, Pin P1-35 */
+    RPI_V2_GPIO_P1_36 = 16, /*!< Version 2, Pin P1-36 */
+    RPI_V2_GPIO_P1_37 = 26, /*!< Version 2, Pin P1-37 */
+    RPI_V2_GPIO_P1_38 = 20, /*!< Version 2, Pin P1-38 */
+    RPI_V2_GPIO_P1_40 = 21, /*!< Version 2, Pin P1-40 */
 
-  /* RPi Version 2, new plug P5 */
-  RPI_V2_GPIO_P5_03 = 28, /*!< Version 2, Pin P5-03 */
-  RPI_V2_GPIO_P5_04 = 29, /*!< Version 2, Pin P5-04 */
-  RPI_V2_GPIO_P5_05 = 30, /*!< Version 2, Pin P5-05 */
-  RPI_V2_GPIO_P5_06 = 31, /*!< Version 2, Pin P5-06 */
+    /* RPi Version 2, new plug P5 */
+    RPI_V2_GPIO_P5_03 = 28, /*!< Version 2, Pin P5-03 */
+    RPI_V2_GPIO_P5_04 = 29, /*!< Version 2, Pin P5-04 */
+    RPI_V2_GPIO_P5_05 = 30, /*!< Version 2, Pin P5-05 */
+    RPI_V2_GPIO_P5_06 = 31, /*!< Version 2, Pin P5-06 */
 
-  /* RPi B+ J8 header, also RPi 2 40 pin GPIO header */
-  RPI_BPLUS_GPIO_J8_03 = 2,  /*!< B+, Pin J8-03 */
-  RPI_BPLUS_GPIO_J8_05 = 3,  /*!< B+, Pin J8-05 */
-  RPI_BPLUS_GPIO_J8_07 = 4,  /*!< B+, Pin J8-07 */
-  RPI_BPLUS_GPIO_J8_08 = 14, /*!< B+, Pin J8-08, defaults to alt function 0 UART0_TXD */
-  RPI_BPLUS_GPIO_J8_10 = 15, /*!< B+, Pin J8-10, defaults to alt function 0 UART0_RXD */
-  RPI_BPLUS_GPIO_J8_11 = 17, /*!< B+, Pin J8-11 */
-  RPI_BPLUS_GPIO_J8_12 = 18, /*!< B+, Pin J8-12, can be PWM channel 0 in ALT FUN 5 */
-  RPI_BPLUS_GPIO_J8_13 = 27, /*!< B+, Pin J8-13 */
-  RPI_BPLUS_GPIO_J8_15 = 22, /*!< B+, Pin J8-15 */
-  RPI_BPLUS_GPIO_J8_16 = 23, /*!< B+, Pin J8-16 */
-  RPI_BPLUS_GPIO_J8_18 = 24, /*!< B+, Pin J8-18 */
-  RPI_BPLUS_GPIO_J8_19 = 10, /*!< B+, Pin J8-19, MOSI when SPI0 in use */
-  RPI_BPLUS_GPIO_J8_21 = 9,  /*!< B+, Pin J8-21, MISO when SPI0 in use */
-  RPI_BPLUS_GPIO_J8_22 = 25, /*!< B+, Pin J8-22 */
-  RPI_BPLUS_GPIO_J8_23 = 11, /*!< B+, Pin J8-23, CLK when SPI0 in use */
-  RPI_BPLUS_GPIO_J8_24 = 8,  /*!< B+, Pin J8-24, CE0 when SPI0 in use */
-  RPI_BPLUS_GPIO_J8_26 = 7,  /*!< B+, Pin J8-26, CE1 when SPI0 in use */
-  RPI_BPLUS_GPIO_J8_29 = 5,  /*!< B+, Pin J8-29,  */
-  RPI_BPLUS_GPIO_J8_31 = 6,  /*!< B+, Pin J8-31,  */
-  RPI_BPLUS_GPIO_J8_32 = 12, /*!< B+, Pin J8-32,  */
-  RPI_BPLUS_GPIO_J8_33 = 13, /*!< B+, Pin J8-33,  */
-  RPI_BPLUS_GPIO_J8_35 = 19, /*!< B+, Pin J8-35,  */
-  RPI_BPLUS_GPIO_J8_36 = 16, /*!< B+, Pin J8-36,  */
-  RPI_BPLUS_GPIO_J8_37 = 26, /*!< B+, Pin J8-37,  */
-  RPI_BPLUS_GPIO_J8_38 = 20, /*!< B+, Pin J8-38,  */
-  RPI_BPLUS_GPIO_J8_40 = 21  /*!< B+, Pin J8-40,  */
+    /* RPi B+ J8 header, also RPi 2 40 pin GPIO header */
+    RPI_BPLUS_GPIO_J8_03 = 2,  /*!< B+, Pin J8-03 */
+    RPI_BPLUS_GPIO_J8_05 = 3,  /*!< B+, Pin J8-05 */
+    RPI_BPLUS_GPIO_J8_07 = 4,  /*!< B+, Pin J8-07 */
+    RPI_BPLUS_GPIO_J8_08 = 14, /*!< B+, Pin J8-08, defaults to alt function 0 UART0_TXD */
+    RPI_BPLUS_GPIO_J8_10 = 15, /*!< B+, Pin J8-10, defaults to alt function 0 UART0_RXD */
+    RPI_BPLUS_GPIO_J8_11 = 17, /*!< B+, Pin J8-11 */
+    RPI_BPLUS_GPIO_J8_12 = 18, /*!< B+, Pin J8-12, can be PWM channel 0 in ALT FUN 5 */
+    RPI_BPLUS_GPIO_J8_13 = 27, /*!< B+, Pin J8-13 */
+    RPI_BPLUS_GPIO_J8_15 = 22, /*!< B+, Pin J8-15 */
+    RPI_BPLUS_GPIO_J8_16 = 23, /*!< B+, Pin J8-16 */
+    RPI_BPLUS_GPIO_J8_18 = 24, /*!< B+, Pin J8-18 */
+    RPI_BPLUS_GPIO_J8_19 = 10, /*!< B+, Pin J8-19, MOSI when SPI0 in use */
+    RPI_BPLUS_GPIO_J8_21 = 9,  /*!< B+, Pin J8-21, MISO when SPI0 in use */
+    RPI_BPLUS_GPIO_J8_22 = 25, /*!< B+, Pin J8-22 */
+    RPI_BPLUS_GPIO_J8_23 = 11, /*!< B+, Pin J8-23, CLK when SPI0 in use */
+    RPI_BPLUS_GPIO_J8_24 = 8,  /*!< B+, Pin J8-24, CE0 when SPI0 in use */
+    RPI_BPLUS_GPIO_J8_26 = 7,  /*!< B+, Pin J8-26, CE1 when SPI0 in use */
+    RPI_BPLUS_GPIO_J8_29 = 5,  /*!< B+, Pin J8-29,  */
+    RPI_BPLUS_GPIO_J8_31 = 6,  /*!< B+, Pin J8-31,  */
+    RPI_BPLUS_GPIO_J8_32 = 12, /*!< B+, Pin J8-32,  */
+    RPI_BPLUS_GPIO_J8_33 = 13, /*!< B+, Pin J8-33,  */
+    RPI_BPLUS_GPIO_J8_35 = 19, /*!< B+, Pin J8-35,  */
+    RPI_BPLUS_GPIO_J8_36 = 16, /*!< B+, Pin J8-36,  */
+    RPI_BPLUS_GPIO_J8_37 = 26, /*!< B+, Pin J8-37,  */
+    RPI_BPLUS_GPIO_J8_38 = 20, /*!< B+, Pin J8-38,  */
+    RPI_BPLUS_GPIO_J8_40 = 21  /*!< B+, Pin J8-40,  */
 } RPiGPIOPin;
 
 /* Defines for SPI
@@ -820,8 +820,8 @@ typedef enum
 */
 typedef enum
 {
-  BCM2835_SPI_BIT_ORDER_LSBFIRST = 0, /*!< LSB First */
-  BCM2835_SPI_BIT_ORDER_MSBFIRST = 1  /*!< MSB First */
+    BCM2835_SPI_BIT_ORDER_LSBFIRST = 0, /*!< LSB First */
+    BCM2835_SPI_BIT_ORDER_MSBFIRST = 1  /*!< MSB First */
 } bcm2835SPIBitOrder;
 
 /*! \brief SPI Data mode
@@ -829,10 +829,10 @@ typedef enum
 */
 typedef enum
 {
-  BCM2835_SPI_MODE0 = 0, /*!< CPOL = 0, CPHA = 0 */
-  BCM2835_SPI_MODE1 = 1, /*!< CPOL = 0, CPHA = 1 */
-  BCM2835_SPI_MODE2 = 2, /*!< CPOL = 1, CPHA = 0 */
-  BCM2835_SPI_MODE3 = 3  /*!< CPOL = 1, CPHA = 1 */
+    BCM2835_SPI_MODE0 = 0, /*!< CPOL = 0, CPHA = 0 */
+    BCM2835_SPI_MODE1 = 1, /*!< CPOL = 0, CPHA = 1 */
+    BCM2835_SPI_MODE2 = 2, /*!< CPOL = 1, CPHA = 0 */
+    BCM2835_SPI_MODE3 = 3  /*!< CPOL = 1, CPHA = 1 */
 } bcm2835SPIMode;
 
 /*! \brief bcm2835SPIChipSelect
@@ -840,10 +840,10 @@ typedef enum
 */
 typedef enum
 {
-  BCM2835_SPI_CS0 = 0,    /*!< Chip Select 0 */
-  BCM2835_SPI_CS1 = 1,    /*!< Chip Select 1 */
-  BCM2835_SPI_CS2 = 2,    /*!< Chip Select 2 (ie pins CS1 and CS2 are asserted) */
-  BCM2835_SPI_CS_NONE = 3 /*!< No CS, control it yourself */
+    BCM2835_SPI_CS0 = 0,    /*!< Chip Select 0 */
+    BCM2835_SPI_CS1 = 1,    /*!< Chip Select 1 */
+    BCM2835_SPI_CS2 = 2,    /*!< Chip Select 2 (ie pins CS1 and CS2 are asserted) */
+    BCM2835_SPI_CS_NONE = 3 /*!< No CS, control it yourself */
 } bcm2835SPIChipSelect;
 
 /*! \brief bcm2835SPIClockDivider
@@ -855,23 +855,23 @@ typedef enum
 */
 typedef enum
 {
-  BCM2835_SPI_CLOCK_DIVIDER_65536 = 0,     /*!< 65536 = 262.144us = 3.814697260kHz */
-  BCM2835_SPI_CLOCK_DIVIDER_32768 = 32768, /*!< 32768 = 131.072us = 7.629394531kHz */
-  BCM2835_SPI_CLOCK_DIVIDER_16384 = 16384, /*!< 16384 = 65.536us = 15.25878906kHz */
-  BCM2835_SPI_CLOCK_DIVIDER_8192 = 8192,   /*!< 8192 = 32.768us = 30/51757813kHz */
-  BCM2835_SPI_CLOCK_DIVIDER_4096 = 4096,   /*!< 4096 = 16.384us = 61.03515625kHz */
-  BCM2835_SPI_CLOCK_DIVIDER_2048 = 2048,   /*!< 2048 = 8.192us = 122.0703125kHz */
-  BCM2835_SPI_CLOCK_DIVIDER_1024 = 1024,   /*!< 1024 = 4.096us = 244.140625kHz */
-  BCM2835_SPI_CLOCK_DIVIDER_512 = 512,     /*!< 512 = 2.048us = 488.28125kHz */
-  BCM2835_SPI_CLOCK_DIVIDER_256 = 256,     /*!< 256 = 1.024us = 976.5625kHz */
-  BCM2835_SPI_CLOCK_DIVIDER_128 = 128,     /*!< 128 = 512ns = = 1.953125MHz */
-  BCM2835_SPI_CLOCK_DIVIDER_64 = 64,       /*!< 64 = 256ns = 3.90625MHz */
-  BCM2835_SPI_CLOCK_DIVIDER_32 = 32,       /*!< 32 = 128ns = 7.8125MHz */
-  BCM2835_SPI_CLOCK_DIVIDER_16 = 16,       /*!< 16 = 64ns = 15.625MHz */
-  BCM2835_SPI_CLOCK_DIVIDER_8 = 8,         /*!< 8 = 32ns = 31.25MHz */
-  BCM2835_SPI_CLOCK_DIVIDER_4 = 4,         /*!< 4 = 16ns = 62.5MHz */
-  BCM2835_SPI_CLOCK_DIVIDER_2 = 2,         /*!< 2 = 8ns = 125MHz, fastest you can get */
-  BCM2835_SPI_CLOCK_DIVIDER_1 = 1          /*!< 1 = 262.144us = 3.814697260kHz, same as 0/65536 */
+    BCM2835_SPI_CLOCK_DIVIDER_65536 = 0,     /*!< 65536 = 262.144us = 3.814697260kHz */
+    BCM2835_SPI_CLOCK_DIVIDER_32768 = 32768, /*!< 32768 = 131.072us = 7.629394531kHz */
+    BCM2835_SPI_CLOCK_DIVIDER_16384 = 16384, /*!< 16384 = 65.536us = 15.25878906kHz */
+    BCM2835_SPI_CLOCK_DIVIDER_8192 = 8192,   /*!< 8192 = 32.768us = 30/51757813kHz */
+    BCM2835_SPI_CLOCK_DIVIDER_4096 = 4096,   /*!< 4096 = 16.384us = 61.03515625kHz */
+    BCM2835_SPI_CLOCK_DIVIDER_2048 = 2048,   /*!< 2048 = 8.192us = 122.0703125kHz */
+    BCM2835_SPI_CLOCK_DIVIDER_1024 = 1024,   /*!< 1024 = 4.096us = 244.140625kHz */
+    BCM2835_SPI_CLOCK_DIVIDER_512 = 512,     /*!< 512 = 2.048us = 488.28125kHz */
+    BCM2835_SPI_CLOCK_DIVIDER_256 = 256,     /*!< 256 = 1.024us = 976.5625kHz */
+    BCM2835_SPI_CLOCK_DIVIDER_128 = 128,     /*!< 128 = 512ns = = 1.953125MHz */
+    BCM2835_SPI_CLOCK_DIVIDER_64 = 64,       /*!< 64 = 256ns = 3.90625MHz */
+    BCM2835_SPI_CLOCK_DIVIDER_32 = 32,       /*!< 32 = 128ns = 7.8125MHz */
+    BCM2835_SPI_CLOCK_DIVIDER_16 = 16,       /*!< 16 = 64ns = 15.625MHz */
+    BCM2835_SPI_CLOCK_DIVIDER_8 = 8,         /*!< 8 = 32ns = 31.25MHz */
+    BCM2835_SPI_CLOCK_DIVIDER_4 = 4,         /*!< 4 = 16ns = 62.5MHz */
+    BCM2835_SPI_CLOCK_DIVIDER_2 = 2,         /*!< 2 = 8ns = 125MHz, fastest you can get */
+    BCM2835_SPI_CLOCK_DIVIDER_1 = 1          /*!< 1 = 262.144us = 3.814697260kHz, same as 0/65536 */
 } bcm2835SPIClockDivider;
 
 /* Defines for I2C
@@ -917,10 +917,10 @@ typedef enum
 */
 typedef enum
 {
-  BCM2835_I2C_CLOCK_DIVIDER_2500 = 2500, /*!< 2500 = 10us = 100 kHz */
-  BCM2835_I2C_CLOCK_DIVIDER_626 = 626,   /*!< 622 = 2.504us = 399.3610 kHz */
-  BCM2835_I2C_CLOCK_DIVIDER_150 = 150,   /*!< 150 = 60ns = 1.666 MHz (default at reset) */
-  BCM2835_I2C_CLOCK_DIVIDER_148 = 148    /*!< 148 = 59ns = 1.689 MHz */
+    BCM2835_I2C_CLOCK_DIVIDER_2500 = 2500, /*!< 2500 = 10us = 100 kHz */
+    BCM2835_I2C_CLOCK_DIVIDER_626 = 626,   /*!< 622 = 2.504us = 399.3610 kHz */
+    BCM2835_I2C_CLOCK_DIVIDER_150 = 150,   /*!< 150 = 60ns = 1.666 MHz (default at reset) */
+    BCM2835_I2C_CLOCK_DIVIDER_148 = 148    /*!< 148 = 59ns = 1.689 MHz */
 } bcm2835I2CClockDivider;
 
 /*! \brief bcm2835I2CReasonCodes
@@ -928,10 +928,10 @@ typedef enum
 */
 typedef enum
 {
-  BCM2835_I2C_REASON_OK = 0x00,         /*!< Success */
-  BCM2835_I2C_REASON_ERROR_NACK = 0x01, /*!< Received a NACK */
-  BCM2835_I2C_REASON_ERROR_CLKT = 0x02, /*!< Received Clock Stretch Timeout */
-  BCM2835_I2C_REASON_ERROR_DATA = 0x04  /*!< Not all data is sent / received */
+    BCM2835_I2C_REASON_OK = 0x00,         /*!< Success */
+    BCM2835_I2C_REASON_ERROR_NACK = 0x01, /*!< Received a NACK */
+    BCM2835_I2C_REASON_ERROR_CLKT = 0x02, /*!< Received Clock Stretch Timeout */
+    BCM2835_I2C_REASON_ERROR_DATA = 0x04  /*!< Not all data is sent / received */
 } bcm2835I2CReasonCodes;
 
 /* Defines for ST
@@ -991,18 +991,18 @@ typedef enum
 */
 typedef enum
 {
-  BCM2835_PWM_CLOCK_DIVIDER_2048 = 2048, /*!< 2048 = 9.375kHz */
-  BCM2835_PWM_CLOCK_DIVIDER_1024 = 1024, /*!< 1024 = 18.75kHz */
-  BCM2835_PWM_CLOCK_DIVIDER_512 = 512,   /*!< 512 = 37.5kHz */
-  BCM2835_PWM_CLOCK_DIVIDER_256 = 256,   /*!< 256 = 75kHz */
-  BCM2835_PWM_CLOCK_DIVIDER_128 = 128,   /*!< 128 = 150kHz */
-  BCM2835_PWM_CLOCK_DIVIDER_64 = 64,     /*!< 64 = 300kHz */
-  BCM2835_PWM_CLOCK_DIVIDER_32 = 32,     /*!< 32 = 600.0kHz */
-  BCM2835_PWM_CLOCK_DIVIDER_16 = 16,     /*!< 16 = 1.2MHz */
-  BCM2835_PWM_CLOCK_DIVIDER_8 = 8,       /*!< 8 = 2.4MHz */
-  BCM2835_PWM_CLOCK_DIVIDER_4 = 4,       /*!< 4 = 4.8MHz */
-  BCM2835_PWM_CLOCK_DIVIDER_2 = 2,       /*!< 2 = 9.6MHz, fastest you can get */
-  BCM2835_PWM_CLOCK_DIVIDER_1 = 1        /*!< 1 = 4.6875kHz, same as divider 4096 */
+    BCM2835_PWM_CLOCK_DIVIDER_2048 = 2048, /*!< 2048 = 9.375kHz */
+    BCM2835_PWM_CLOCK_DIVIDER_1024 = 1024, /*!< 1024 = 18.75kHz */
+    BCM2835_PWM_CLOCK_DIVIDER_512 = 512,   /*!< 512 = 37.5kHz */
+    BCM2835_PWM_CLOCK_DIVIDER_256 = 256,   /*!< 256 = 75kHz */
+    BCM2835_PWM_CLOCK_DIVIDER_128 = 128,   /*!< 128 = 150kHz */
+    BCM2835_PWM_CLOCK_DIVIDER_64 = 64,     /*!< 64 = 300kHz */
+    BCM2835_PWM_CLOCK_DIVIDER_32 = 32,     /*!< 32 = 600.0kHz */
+    BCM2835_PWM_CLOCK_DIVIDER_16 = 16,     /*!< 16 = 1.2MHz */
+    BCM2835_PWM_CLOCK_DIVIDER_8 = 8,       /*!< 8 = 2.4MHz */
+    BCM2835_PWM_CLOCK_DIVIDER_4 = 4,       /*!< 4 = 4.8MHz */
+    BCM2835_PWM_CLOCK_DIVIDER_2 = 2,       /*!< 2 = 9.6MHz, fastest you can get */
+    BCM2835_PWM_CLOCK_DIVIDER_1 = 1        /*!< 1 = 4.6875kHz, same as divider 4096 */
 } bcm2835PWMClockDivider;
 
 /* Historical name compatibility */
@@ -1016,12 +1016,12 @@ extern "C"
 {
 #endif
 
-  /*! \defgroup init Library initialisation and management
+    /*! \defgroup init Library initialisation and management
       These functions allow you to intialise and control the bcm2835 library
       @{
     */
 
-  /*! Initialise the library by opening /dev/mem (if you are root)
+    /*! Initialise the library by opening /dev/mem (if you are root)
       or /dev/gpiomem (if you are not)
       and getting pointers to the
       internal memory for BCM 2835 device registers. You must call this (successfully)
@@ -1034,45 +1034,45 @@ extern "C"
       Prints messages to stderr in case of errors.
       \return 1 if successful else 0
     */
-  extern int bcm2835_init(void);
+    extern int bcm2835_init(void);
 
-  /*! Close the library, deallocating any allocated memory and closing /dev/mem
+    /*! Close the library, deallocating any allocated memory and closing /dev/mem
       \return 1 if successful else 0
     */
-  extern int bcm2835_close(void);
+    extern int bcm2835_close(void);
 
-  /*! Sets the debug level of the library.
+    /*! Sets the debug level of the library.
       A value of 1 prevents mapping to /dev/mem, and makes the library print out
       what it would do, rather than accessing the GPIO registers.
       A value of 0, the default, causes normal operation.
       Call this before calling bcm2835_init();
       \param[in] debug The new debug level. 1 means debug
     */
-  extern void bcm2835_set_debug(uint8_t debug);
+    extern void bcm2835_set_debug(uint8_t debug);
 
-  /*! Returns the version number of the library, same as BCM2835_VERSION
+    /*! Returns the version number of the library, same as BCM2835_VERSION
        \return the current library version number
     */
-  extern unsigned int bcm2835_version(void);
+    extern unsigned int bcm2835_version(void);
 
-  /*! @} */
+    /*! @} */
 
-  /*! \defgroup lowlevel Low level register access
+    /*! \defgroup lowlevel Low level register access
       These functions provide low level register access, and should not generally
       need to be used
 
       @{
     */
 
-  /*! Gets the base of a register
+    /*! Gets the base of a register
       \param[in] regbase You can use one of the common values BCM2835_REGBASE_*
       in \ref bcm2835RegisterBase
       \return the register base
       \sa Physical Addresses
     */
-  extern uint32_t *bcm2835_regbase(uint8_t regbase);
+    extern uint32_t *bcm2835_regbase(uint8_t regbase);
 
-  /*! Reads 32 bit value from a peripheral address WITH a memory barrier before and after each read.
+    /*! Reads 32 bit value from a peripheral address WITH a memory barrier before and after each read.
       This is safe, but slow.  The MB before protects this read from any in-flight reads that didn't
       use a MB.  The MB after protects subsequent reads from another peripheral.
 
@@ -1080,9 +1080,9 @@ extern "C"
       \return the value read from the 32 bit register
       \sa Physical Addresses
     */
-  extern uint32_t bcm2835_peri_read(volatile uint32_t *paddr);
+    extern uint32_t bcm2835_peri_read(volatile uint32_t *paddr);
 
-  /*! Reads 32 bit value from a peripheral address WITHOUT the read barriers
+    /*! Reads 32 bit value from a peripheral address WITHOUT the read barriers
       You should only use this when:
       o your code has previously called bcm2835_peri_read() for a register
       within the same peripheral, and no read or write to another peripheral has occurred since.
@@ -1092,9 +1092,9 @@ extern "C"
       \return the value read from the 32 bit register
       \sa Physical Addresses
     */
-  extern uint32_t bcm2835_peri_read_nb(volatile uint32_t *paddr);
+    extern uint32_t bcm2835_peri_read_nb(volatile uint32_t *paddr);
 
-  /*! Writes 32 bit value from a peripheral address WITH a memory barrier before and after each write
+    /*! Writes 32 bit value from a peripheral address WITH a memory barrier before and after each write
       This is safe, but slow.  The MB before ensures that any in-flight write to another peripheral
       completes before this write is issued.  The MB after ensures that subsequent reads and writes
       to another peripheral will see the effect of this write.
@@ -1105,9 +1105,9 @@ extern "C"
       \param[in] value The 32 bit value to write
       \sa Physical Addresses
     */
-  extern void bcm2835_peri_write(volatile uint32_t *paddr, uint32_t value);
+    extern void bcm2835_peri_write(volatile uint32_t *paddr, uint32_t value);
 
-  /*! Writes 32 bit value from a peripheral address without the write barrier
+    /*! Writes 32 bit value from a peripheral address without the write barrier
       You should only use this when:
       o your code has previously called bcm2835_peri_write() for a register
       within the same peripheral, and no other peripheral access has occurred since.
@@ -1119,9 +1119,9 @@ extern "C"
       \param[in] value The 32 bit value to write
       \sa Physical Addresses
     */
-  extern void bcm2835_peri_write_nb(volatile uint32_t *paddr, uint32_t value);
+    extern void bcm2835_peri_write_nb(volatile uint32_t *paddr, uint32_t value);
 
-  /*! Alters a number of bits in a 32 peripheral regsiter.
+    /*! Alters a number of bits in a 32 peripheral regsiter.
       It reads the current valu and then alters the bits defines as 1 in mask,
       according to the bit value in value.
       All other bits that are 0 in the mask are unaffected.
@@ -1133,59 +1133,59 @@ extern "C"
       \param[in] mask Bitmask that defines the bits that will be altered in the register.
       \sa Physical Addresses
     */
-  extern void bcm2835_peri_set_bits(volatile uint32_t *paddr, uint32_t value, uint32_t mask);
-  /*! @}    end of lowlevel */
+    extern void bcm2835_peri_set_bits(volatile uint32_t *paddr, uint32_t value, uint32_t mask);
+    /*! @}    end of lowlevel */
 
-  /*! \defgroup gpio GPIO register access
+    /*! \defgroup gpio GPIO register access
       These functions allow you to control the GPIO interface. You can set the
       function of each GPIO pin, read the input state and set the output state.
       @{
     */
 
-  /*! Sets the Function Select register for the given pin, which configures
+    /*! Sets the Function Select register for the given pin, which configures
       the pin as Input, Output or one of the 6 alternate functions.
       \param[in] pin GPIO number, or one of RPI_GPIO_P1_* from \ref RPiGPIOPin.
       \param[in] mode Mode to set the pin to, one of BCM2835_GPIO_FSEL_* from \ref bcm2835FunctionSelect
     */
-  extern void bcm2835_gpio_fsel(uint8_t pin, uint8_t mode);
+    extern void bcm2835_gpio_fsel(uint8_t pin, uint8_t mode);
 
-  /*! Sets the specified pin output to
+    /*! Sets the specified pin output to
       HIGH.
       \param[in] pin GPIO number, or one of RPI_GPIO_P1_* from \ref RPiGPIOPin.
       \sa bcm2835_gpio_write()
     */
-  extern void bcm2835_gpio_set(uint8_t pin);
+    extern void bcm2835_gpio_set(uint8_t pin);
 
-  /*! Sets the specified pin output to
+    /*! Sets the specified pin output to
       LOW.
       \param[in] pin GPIO number, or one of RPI_GPIO_P1_* from \ref RPiGPIOPin.
       \sa bcm2835_gpio_write()
     */
-  extern void bcm2835_gpio_clr(uint8_t pin);
+    extern void bcm2835_gpio_clr(uint8_t pin);
 
-  /*! Sets any of the first 32 GPIO output pins specified in the mask to
+    /*! Sets any of the first 32 GPIO output pins specified in the mask to
       HIGH.
       \param[in] mask Mask of pins to affect. Use eg: (1 << RPI_GPIO_P1_03) | (1 << RPI_GPIO_P1_05)
       \sa bcm2835_gpio_write_multi()
     */
-  extern void bcm2835_gpio_set_multi(uint32_t mask);
+    extern void bcm2835_gpio_set_multi(uint32_t mask);
 
-  /*! Sets any of the first 32 GPIO output pins specified in the mask to
+    /*! Sets any of the first 32 GPIO output pins specified in the mask to
       LOW.
       \param[in] mask Mask of pins to affect. Use eg: (1 << RPI_GPIO_P1_03) | (1 << RPI_GPIO_P1_05)
       \sa bcm2835_gpio_write_multi()
     */
-  extern void bcm2835_gpio_clr_multi(uint32_t mask);
+    extern void bcm2835_gpio_clr_multi(uint32_t mask);
 
-  /*! Reads the current level on the specified
+    /*! Reads the current level on the specified
       pin and returns either HIGH or LOW. Works whether or not the pin
       is an input or an output.
       \param[in] pin GPIO number, or one of RPI_GPIO_P1_* from \ref RPiGPIOPin.
       \return the current level  either HIGH or LOW
     */
-  extern uint8_t bcm2835_gpio_lev(uint8_t pin);
+    extern uint8_t bcm2835_gpio_lev(uint8_t pin);
 
-  /*! Event Detect Status.
+    /*! Event Detect Status.
       Tests whether the specified pin has detected a level or edge
       as requested by bcm2835_gpio_ren(), bcm2835_gpio_fen(), bcm2835_gpio_hen(),
       bcm2835_gpio_len(), bcm2835_gpio_aren(), bcm2835_gpio_afen().
@@ -1193,29 +1193,29 @@ extern "C"
       \param[in] pin GPIO number, or one of RPI_GPIO_P1_* from \ref RPiGPIOPin.
       \return HIGH if the event detect status for the given pin is true.
     */
-  extern uint8_t bcm2835_gpio_eds(uint8_t pin);
+    extern uint8_t bcm2835_gpio_eds(uint8_t pin);
 
-  /*! Same as bcm2835_gpio_eds() but checks if any of the pins specified in
+    /*! Same as bcm2835_gpio_eds() but checks if any of the pins specified in
       the mask have detected a level or edge.
       \param[in] mask Mask of pins to check. Use eg: (1 << RPI_GPIO_P1_03) | (1 << RPI_GPIO_P1_05)
       \return Mask of pins HIGH if the event detect status for the given pin is true.
     */
-  extern uint32_t bcm2835_gpio_eds_multi(uint32_t mask);
+    extern uint32_t bcm2835_gpio_eds_multi(uint32_t mask);
 
-  /*! Sets the Event Detect Status register for a given pin to 1,
+    /*! Sets the Event Detect Status register for a given pin to 1,
       which has the effect of clearing the flag. Use this afer seeing
       an Event Detect Status on the pin.
       \param[in] pin GPIO number, or one of RPI_GPIO_P1_* from \ref RPiGPIOPin.
     */
-  extern void bcm2835_gpio_set_eds(uint8_t pin);
+    extern void bcm2835_gpio_set_eds(uint8_t pin);
 
-  /*! Same as bcm2835_gpio_set_eds() but clears the flag for any pin which
+    /*! Same as bcm2835_gpio_set_eds() but clears the flag for any pin which
       is set in the mask.
       \param[in] mask Mask of pins to clear. Use eg: (1 << RPI_GPIO_P1_03) | (1 << RPI_GPIO_P1_05)
     */
-  extern void bcm2835_gpio_set_eds_multi(uint32_t mask);
+    extern void bcm2835_gpio_set_eds_multi(uint32_t mask);
 
-  /*! Enable Rising Edge Detect Enable for the specified pin.
+    /*! Enable Rising Edge Detect Enable for the specified pin.
       When a rising edge is detected, sets the appropriate pin in Event Detect Status.
       The GPRENn registers use
       synchronous edge detection. This means the input signal is sampled using the
@@ -1223,14 +1223,14 @@ extern "C"
       has the effect of suppressing glitches.
       \param[in] pin GPIO number, or one of RPI_GPIO_P1_* from \ref RPiGPIOPin.
     */
-  extern void bcm2835_gpio_ren(uint8_t pin);
+    extern void bcm2835_gpio_ren(uint8_t pin);
 
-  /*! Disable Rising Edge Detect Enable for the specified pin.
+    /*! Disable Rising Edge Detect Enable for the specified pin.
       \param[in] pin GPIO number, or one of RPI_GPIO_P1_* from \ref RPiGPIOPin.
     */
-  extern void bcm2835_gpio_clr_ren(uint8_t pin);
+    extern void bcm2835_gpio_clr_ren(uint8_t pin);
 
-  /*! Enable Falling Edge Detect Enable for the specified pin.
+    /*! Enable Falling Edge Detect Enable for the specified pin.
       When a falling edge is detected, sets the appropriate pin in Event Detect Status.
       The GPRENn registers use
       synchronous edge detection. This means the input signal is sampled using the
@@ -1238,92 +1238,92 @@ extern "C"
       has the effect of suppressing glitches.
       \param[in] pin GPIO number, or one of RPI_GPIO_P1_* from \ref RPiGPIOPin.
     */
-  extern void bcm2835_gpio_fen(uint8_t pin);
+    extern void bcm2835_gpio_fen(uint8_t pin);
 
-  /*! Disable Falling Edge Detect Enable for the specified pin.
+    /*! Disable Falling Edge Detect Enable for the specified pin.
       \param[in] pin GPIO number, or one of RPI_GPIO_P1_* from \ref RPiGPIOPin.
     */
-  extern void bcm2835_gpio_clr_fen(uint8_t pin);
+    extern void bcm2835_gpio_clr_fen(uint8_t pin);
 
-  /*! Enable High Detect Enable for the specified pin.
+    /*! Enable High Detect Enable for the specified pin.
       When a HIGH level is detected on the pin, sets the appropriate pin in Event Detect Status.
       \param[in] pin GPIO number, or one of RPI_GPIO_P1_* from \ref RPiGPIOPin.
     */
-  extern void bcm2835_gpio_hen(uint8_t pin);
+    extern void bcm2835_gpio_hen(uint8_t pin);
 
-  /*! Disable High Detect Enable for the specified pin.
+    /*! Disable High Detect Enable for the specified pin.
       \param[in] pin GPIO number, or one of RPI_GPIO_P1_* from \ref RPiGPIOPin.
     */
-  extern void bcm2835_gpio_clr_hen(uint8_t pin);
+    extern void bcm2835_gpio_clr_hen(uint8_t pin);
 
-  /*! Enable Low Detect Enable for the specified pin.
+    /*! Enable Low Detect Enable for the specified pin.
       When a LOW level is detected on the pin, sets the appropriate pin in Event Detect Status.
       \param[in] pin GPIO number, or one of RPI_GPIO_P1_* from \ref RPiGPIOPin.
     */
-  extern void bcm2835_gpio_len(uint8_t pin);
+    extern void bcm2835_gpio_len(uint8_t pin);
 
-  /*! Disable Low Detect Enable for the specified pin.
+    /*! Disable Low Detect Enable for the specified pin.
       \param[in] pin GPIO number, or one of RPI_GPIO_P1_* from \ref RPiGPIOPin.
     */
-  extern void bcm2835_gpio_clr_len(uint8_t pin);
+    extern void bcm2835_gpio_clr_len(uint8_t pin);
 
-  /*! Enable Asynchronous Rising Edge Detect Enable for the specified pin.
+    /*! Enable Asynchronous Rising Edge Detect Enable for the specified pin.
       When a rising edge is detected, sets the appropriate pin in Event Detect Status.
       Asynchronous means the incoming signal is not sampled by the system clock. As such
       rising edges of very short duration can be detected.
       \param[in] pin GPIO number, or one of RPI_GPIO_P1_* from \ref RPiGPIOPin.
     */
-  extern void bcm2835_gpio_aren(uint8_t pin);
+    extern void bcm2835_gpio_aren(uint8_t pin);
 
-  /*! Disable Asynchronous Rising Edge Detect Enable for the specified pin.
+    /*! Disable Asynchronous Rising Edge Detect Enable for the specified pin.
       \param[in] pin GPIO number, or one of RPI_GPIO_P1_* from \ref RPiGPIOPin.
     */
-  extern void bcm2835_gpio_clr_aren(uint8_t pin);
+    extern void bcm2835_gpio_clr_aren(uint8_t pin);
 
-  /*! Enable Asynchronous Falling Edge Detect Enable for the specified pin.
+    /*! Enable Asynchronous Falling Edge Detect Enable for the specified pin.
       When a falling edge is detected, sets the appropriate pin in Event Detect Status.
       Asynchronous means the incoming signal is not sampled by the system clock. As such
       falling edges of very short duration can be detected.
       \param[in] pin GPIO number, or one of RPI_GPIO_P1_* from \ref RPiGPIOPin.
     */
-  extern void bcm2835_gpio_afen(uint8_t pin);
+    extern void bcm2835_gpio_afen(uint8_t pin);
 
-  /*! Disable Asynchronous Falling Edge Detect Enable for the specified pin.
+    /*! Disable Asynchronous Falling Edge Detect Enable for the specified pin.
       \param[in] pin GPIO number, or one of RPI_GPIO_P1_* from \ref RPiGPIOPin.
     */
-  extern void bcm2835_gpio_clr_afen(uint8_t pin);
+    extern void bcm2835_gpio_clr_afen(uint8_t pin);
 
-  /*! Sets the Pull-up/down register for the given pin. This is
+    /*! Sets the Pull-up/down register for the given pin. This is
       used with bcm2835_gpio_pudclk() to set the  Pull-up/down resistor for the given pin.
       However, it is usually more convenient to use bcm2835_gpio_set_pud().
       \param[in] pud The desired Pull-up/down mode. One of BCM2835_GPIO_PUD_* from bcm2835PUDControl
       \sa bcm2835_gpio_set_pud()
     */
-  extern void bcm2835_gpio_pud(uint8_t pud);
+    extern void bcm2835_gpio_pud(uint8_t pud);
 
-  /*! Clocks the Pull-up/down value set earlier by bcm2835_gpio_pud() into the pin.
+    /*! Clocks the Pull-up/down value set earlier by bcm2835_gpio_pud() into the pin.
       \param[in] pin GPIO number, or one of RPI_GPIO_P1_* from \ref RPiGPIOPin.
       \param[in] on HIGH to clock the value from bcm2835_gpio_pud() into the pin.
       LOW to remove the clock.
       \sa bcm2835_gpio_set_pud()
     */
-  extern void bcm2835_gpio_pudclk(uint8_t pin, uint8_t on);
+    extern void bcm2835_gpio_pudclk(uint8_t pin, uint8_t on);
 
-  /*! Reads and returns the Pad Control for the given GPIO group.
+    /*! Reads and returns the Pad Control for the given GPIO group.
       \param[in] group The GPIO pad group number, one of BCM2835_PAD_GROUP_GPIO_*
       \return Mask of bits from BCM2835_PAD_* from \ref bcm2835PadGroup
     */
-  extern uint32_t bcm2835_gpio_pad(uint8_t group);
+    extern uint32_t bcm2835_gpio_pad(uint8_t group);
 
-  /*! Sets the Pad Control for the given GPIO group.
+    /*! Sets the Pad Control for the given GPIO group.
       \param[in] group The GPIO pad group number, one of BCM2835_PAD_GROUP_GPIO_*
       \param[in] control Mask of bits from BCM2835_PAD_* from \ref bcm2835PadGroup. Note
       that it is not necessary to include BCM2835_PAD_PASSWRD in the mask as this
       is automatically included.
     */
-  extern void bcm2835_gpio_set_pad(uint8_t group, uint32_t control);
+    extern void bcm2835_gpio_set_pad(uint8_t group, uint32_t control);
 
-  /*! Delays for the specified number of milliseconds.
+    /*! Delays for the specified number of milliseconds.
       Uses nanosleep(), and therefore does not use CPU until the time is up.
       However, you are at the mercy of nanosleep(). From the manual for nanosleep():
       If the interval specified in req is not an exact multiple of the granularity
@@ -1333,9 +1333,9 @@ extern "C"
       again execute the calling thread.
       \param[in] millis Delay in milliseconds
     */
-  extern void bcm2835_delay(unsigned int millis);
+    extern void bcm2835_delay(unsigned int millis);
 
-  /*! Delays for the specified number of microseconds.
+    /*! Delays for the specified number of microseconds.
       Uses a combination of nanosleep() and a busy wait loop on the BCM2835 system timers,
       However, you are at the mercy of nanosleep(). From the manual for nanosleep():
       If the interval specified in req is not an exact multiple of the granularity
@@ -1348,42 +1348,42 @@ extern "C"
       result in a delay of about 80 microseconds. Your mileage may vary.
       \param[in] micros Delay in microseconds
     */
-  extern void bcm2835_delayMicroseconds(uint64_t micros);
+    extern void bcm2835_delayMicroseconds(uint64_t micros);
 
-  /*! Sets the output state of the specified pin
+    /*! Sets the output state of the specified pin
       \param[in] pin GPIO number, or one of RPI_GPIO_P1_* from \ref RPiGPIOPin.
       \param[in] on HIGH sets the output to HIGH and LOW to LOW.
     */
-  extern void bcm2835_gpio_write(uint8_t pin, uint8_t on);
+    extern void bcm2835_gpio_write(uint8_t pin, uint8_t on);
 
-  /*! Sets any of the first 32 GPIO output pins specified in the mask to the state given by on
+    /*! Sets any of the first 32 GPIO output pins specified in the mask to the state given by on
       \param[in] mask Mask of pins to affect. Use eg: (1 << RPI_GPIO_P1_03) | (1 << RPI_GPIO_P1_05)
       \param[in] on HIGH sets the output to HIGH and LOW to LOW.
     */
-  extern void bcm2835_gpio_write_multi(uint32_t mask, uint8_t on);
+    extern void bcm2835_gpio_write_multi(uint32_t mask, uint8_t on);
 
-  /*! Sets the first 32 GPIO output pins specified in the mask to the value given by value
+    /*! Sets the first 32 GPIO output pins specified in the mask to the value given by value
       \param[in] value values required for each bit masked in by mask, eg: (1 << RPI_GPIO_P1_03) | (1 << RPI_GPIO_P1_05)
       \param[in] mask Mask of pins to affect. Use eg: (1 << RPI_GPIO_P1_03) | (1 << RPI_GPIO_P1_05)
     */
-  extern void bcm2835_gpio_write_mask(uint32_t value, uint32_t mask);
+    extern void bcm2835_gpio_write_mask(uint32_t value, uint32_t mask);
 
-  /*! Sets the Pull-up/down mode for the specified pin. This is more convenient than
+    /*! Sets the Pull-up/down mode for the specified pin. This is more convenient than
       clocking the mode in with bcm2835_gpio_pud() and bcm2835_gpio_pudclk().
       \param[in] pin GPIO number, or one of RPI_GPIO_P1_* from \ref RPiGPIOPin.
       \param[in] pud The desired Pull-up/down mode. One of BCM2835_GPIO_PUD_* from bcm2835PUDControl
     */
-  extern void bcm2835_gpio_set_pud(uint8_t pin, uint8_t pud);
+    extern void bcm2835_gpio_set_pud(uint8_t pin, uint8_t pud);
 
-  /*! @}  */
+    /*! @}  */
 
-  /*! \defgroup spi SPI access
+    /*! \defgroup spi SPI access
       These functions let you use SPI0 (Serial Peripheral Interface) to
       interface with an external SPI device.
       @{
     */
 
-  /*! Start SPI operations.
+    /*! Start SPI operations.
       Forces RPi SPI0 pins P1-19 (MOSI), P1-21 (MISO), P1-23 (CLK), P1-24 (CE0) and P1-26 (CE1)
       to alternate function ALT0, which enables those pins for SPI interface.
       You should call bcm2835_spi_end() when all SPI funcitons are complete to return the pins to
@@ -1391,45 +1391,45 @@ extern "C"
       \sa  bcm2835_spi_end()
       \return 1 if successful, 0 otherwise (perhaps because you are not running as root)
     */
-  extern int bcm2835_spi_begin(void);
+    extern int bcm2835_spi_begin(void);
 
-  /*! End SPI operations.
+    /*! End SPI operations.
       SPI0 pins P1-19 (MOSI), P1-21 (MISO), P1-23 (CLK), P1-24 (CE0) and P1-26 (CE1)
       are returned to their default INPUT behaviour.
     */
-  extern void bcm2835_spi_end(void);
+    extern void bcm2835_spi_end(void);
 
-  /*! Sets the SPI bit order
+    /*! Sets the SPI bit order
       NOTE: has no effect. Not supported by SPI0.
       Defaults to
       \param[in] order The desired bit order, one of BCM2835_SPI_BIT_ORDER_*,
       see \ref bcm2835SPIBitOrder
     */
-  extern void bcm2835_spi_setBitOrder(uint8_t order);
+    extern void bcm2835_spi_setBitOrder(uint8_t order);
 
-  /*! Sets the SPI clock divider and therefore the
+    /*! Sets the SPI clock divider and therefore the
       SPI clock speed.
       \param[in] divider The desired SPI clock divider, one of BCM2835_SPI_CLOCK_DIVIDER_*,
       see \ref bcm2835SPIClockDivider
     */
-  extern void bcm2835_spi_setClockDivider(uint16_t divider);
+    extern void bcm2835_spi_setClockDivider(uint16_t divider);
 
-  /*! Sets the SPI data mode
+    /*! Sets the SPI data mode
       Sets the clock polariy and phase
       \param[in] mode The desired data mode, one of BCM2835_SPI_MODE*,
       see \ref bcm2835SPIMode
     */
-  extern void bcm2835_spi_setDataMode(uint8_t mode);
+    extern void bcm2835_spi_setDataMode(uint8_t mode);
 
-  /*! Sets the chip select pin(s)
+    /*! Sets the chip select pin(s)
       When an bcm2835_spi_transfer() is made, the selected pin(s) will be asserted during the
       transfer.
       \param[in] cs Specifies the CS pins(s) that are used to activate the desired slave.
       One of BCM2835_SPI_CS*, see \ref bcm2835SPIChipSelect
     */
-  extern void bcm2835_spi_chipSelect(uint8_t cs);
+    extern void bcm2835_spi_chipSelect(uint8_t cs);
 
-  /*! Sets the chip select pin polarity for a given pin
+    /*! Sets the chip select pin polarity for a given pin
       When an bcm2835_spi_transfer() occurs, the currently selected chip select pin(s)
       will be asserted to the
       value given by active. When transfers are not happening, the chip select pin(s)
@@ -1437,9 +1437,9 @@ extern "C"
       \param[in] cs The chip select pin to affect
       \param[in] active Whether the chip select pin is to be active HIGH
     */
-  extern void bcm2835_spi_setChipSelectPolarity(uint8_t cs, uint8_t active);
+    extern void bcm2835_spi_setChipSelectPolarity(uint8_t cs, uint8_t active);
 
-  /*! Transfers one byte to and from the currently selected SPI slave.
+    /*! Transfers one byte to and from the currently selected SPI slave.
       Asserts the currently selected CS pins (as previously set by bcm2835_spi_chipSelect)
       during the transfer.
       Clocks the 8 bit value out on MOSI, and simultaneously clocks in data from MISO.
@@ -1449,9 +1449,9 @@ extern "C"
       \return The 8 bit byte simultaneously read from  MISO
       \sa bcm2835_spi_transfern()
     */
-  extern uint8_t bcm2835_spi_transfer(uint8_t value);
+    extern uint8_t bcm2835_spi_transfer(uint8_t value);
 
-  /*! Transfers any number of bytes to and from the currently selected SPI slave.
+    /*! Transfers any number of bytes to and from the currently selected SPI slave.
       Asserts the currently selected CS pins (as previously set by bcm2835_spi_chipSelect)
       during the transfer.
       Clocks the len 8 bit bytes out on MOSI, and simultaneously clocks in data from MISO.
@@ -1462,34 +1462,34 @@ extern "C"
       \param[in] len Number of bytes in the tbuf buffer, and the number of bytes to send/received
       \sa bcm2835_spi_transfer()
     */
-  extern void bcm2835_spi_transfernb(char *tbuf, char *rbuf, uint32_t len);
+    extern void bcm2835_spi_transfernb(char *tbuf, char *rbuf, uint32_t len);
 
-  /*! Transfers any number of bytes to and from the currently selected SPI slave
+    /*! Transfers any number of bytes to and from the currently selected SPI slave
       using bcm2835_spi_transfernb.
       The returned data from the slave replaces the transmitted data in the buffer.
       \param[in,out] buf Buffer of bytes to send. Received bytes will replace the contents
       \param[in] len Number of bytes int eh buffer, and the number of bytes to send/received
       \sa bcm2835_spi_transfer()
     */
-  extern void bcm2835_spi_transfern(char *buf, uint32_t len);
+    extern void bcm2835_spi_transfern(char *buf, uint32_t len);
 
-  /*! Transfers any number of bytes to the currently selected SPI slave.
+    /*! Transfers any number of bytes to the currently selected SPI slave.
       Asserts the currently selected CS pins (as previously set by bcm2835_spi_chipSelect)
       during the transfer.
       \param[in] buf Buffer of bytes to send.
       \param[in] len Number of bytes in the tbuf buffer, and the number of bytes to send
     */
-  extern void bcm2835_spi_writenb(char *buf, uint32_t len);
+    extern void bcm2835_spi_writenb(char *buf, uint32_t len);
 
-  /*! @} */
+    /*! @} */
 
-  /*! \defgroup i2c I2C access
+    /*! \defgroup i2c I2C access
       These functions let you use I2C (The Broadcom Serial Control bus with the Philips
       I2C bus/interface version 2.1 January 2000.) to interface with an external I2C device.
       @{
     */
 
-  /*! Start I2C operations.
+    /*! Start I2C operations.
       Forces RPi I2C pins P1-03 (SDA) and P1-05 (SCL)
       to alternate function ALT0, which enables those pins for I2C interface.
       You should call bcm2835_i2c_end() when all I2C functions are complete to return the pins to
@@ -1497,50 +1497,50 @@ extern "C"
       \return 1 if successful, 0 otherwise (perhaps because you are not running as root)
       \sa  bcm2835_i2c_end()
     */
-  extern int bcm2835_i2c_begin(void);
+    extern int bcm2835_i2c_begin(void);
 
-  /*! End I2C operations.
+    /*! End I2C operations.
       I2C pins P1-03 (SDA) and P1-05 (SCL)
       are returned to their default INPUT behaviour.
     */
-  extern void bcm2835_i2c_end(void);
+    extern void bcm2835_i2c_end(void);
 
-  /*! Sets the I2C slave address.
+    /*! Sets the I2C slave address.
       \param[in] addr The I2C slave address.
     */
-  extern void bcm2835_i2c_setSlaveAddress(uint8_t addr);
+    extern void bcm2835_i2c_setSlaveAddress(uint8_t addr);
 
-  /*! Sets the I2C clock divider and therefore the I2C clock speed.
+    /*! Sets the I2C clock divider and therefore the I2C clock speed.
       \param[in] divider The desired I2C clock divider, one of BCM2835_I2C_CLOCK_DIVIDER_*,
       see \ref bcm2835I2CClockDivider
     */
-  extern void bcm2835_i2c_setClockDivider(uint16_t divider);
+    extern void bcm2835_i2c_setClockDivider(uint16_t divider);
 
-  /*! Sets the I2C clock divider by converting the baudrate parameter to
+    /*! Sets the I2C clock divider by converting the baudrate parameter to
       the equivalent I2C clock divider. ( see \sa bcm2835_i2c_setClockDivider)
       For the I2C standard 100khz you would set baudrate to 100000
       The use of baudrate corresponds to its use in the I2C kernel device
       driver. (Of course, bcm2835 has nothing to do with the kernel driver)
     */
-  extern void bcm2835_i2c_set_baudrate(uint32_t baudrate);
+    extern void bcm2835_i2c_set_baudrate(uint32_t baudrate);
 
-  /*! Transfers any number of bytes to the currently selected I2C slave.
+    /*! Transfers any number of bytes to the currently selected I2C slave.
       (as previously set by \sa bcm2835_i2c_setSlaveAddress)
       \param[in] buf Buffer of bytes to send.
       \param[in] len Number of bytes in the buf buffer, and the number of bytes to send.
       \return reason see \ref bcm2835I2CReasonCodes
     */
-  extern uint8_t bcm2835_i2c_write(const char *buf, uint32_t len);
+    extern uint8_t bcm2835_i2c_write(const char *buf, uint32_t len);
 
-  /*! Transfers any number of bytes from the currently selected I2C slave.
+    /*! Transfers any number of bytes from the currently selected I2C slave.
       (as previously set by \sa bcm2835_i2c_setSlaveAddress)
       \param[in] buf Buffer of bytes to receive.
       \param[in] len Number of bytes in the buf buffer, and the number of bytes to received.
       \return reason see \ref bcm2835I2CReasonCodes
     */
-  extern uint8_t bcm2835_i2c_read(char *buf, uint32_t len);
+    extern uint8_t bcm2835_i2c_read(char *buf, uint32_t len);
 
-  /*! Allows reading from I2C slaves that require a repeated start (without any prior stop)
+    /*! Allows reading from I2C slaves that require a repeated start (without any prior stop)
       to read after the required slave register has been set. For example, the popular
       MPL3115A2 pressure and temperature sensor. Note that your device must support or
       require this mode. If your device does not require this mode then the standard
@@ -1554,9 +1554,9 @@ extern "C"
       \param[in] len Number of bytes in the buf buffer, and the number of bytes to received.
       \return reason see \ref bcm2835I2CReasonCodes
     */
-  extern uint8_t bcm2835_i2c_read_register_rs(char *regaddr, char *buf, uint32_t len);
+    extern uint8_t bcm2835_i2c_read_register_rs(char *regaddr, char *buf, uint32_t len);
 
-  /*! Allows sending an arbitrary number of bytes to I2C slaves before issuing a repeated
+    /*! Allows sending an arbitrary number of bytes to I2C slaves before issuing a repeated
       start (with no prior stop) and reading a response.
       Necessary for devices that require such behavior, such as the MLX90620.
       Will write to and read from the slave previously set by \sa bcm2835_i2c_setSlaveAddress
@@ -1566,29 +1566,29 @@ extern "C"
       \param[in] buf_len Number of bytes to receive in the buf buffer.
       \return reason see \ref bcm2835I2CReasonCodes
     */
-  extern uint8_t bcm2835_i2c_write_read_rs(char *cmds, uint32_t cmds_len, char *buf, uint32_t buf_len);
+    extern uint8_t bcm2835_i2c_write_read_rs(char *cmds, uint32_t cmds_len, char *buf, uint32_t buf_len);
 
-  /*! @} */
+    /*! @} */
 
-  /*! \defgroup st System Timer access
+    /*! \defgroup st System Timer access
       Allows access to and delays using the System Timer Counter.
       @{
     */
 
-  /*! Read the System Timer Counter register.
+    /*! Read the System Timer Counter register.
       \return the value read from the System Timer Counter Lower 32 bits register
     */
-  extern uint64_t bcm2835_st_read(void);
+    extern uint64_t bcm2835_st_read(void);
 
-  /*! Delays for the specified number of microseconds with offset.
+    /*! Delays for the specified number of microseconds with offset.
       \param[in] offset_micros Offset in microseconds
       \param[in] micros Delay in microseconds
     */
-  extern void bcm2835_st_delay(uint64_t offset_micros, uint64_t micros);
+    extern void bcm2835_st_delay(uint64_t offset_micros, uint64_t micros);
 
-  /*! @}  */
+    /*! @}  */
 
-  /*! \defgroup pwm Pulse Width Modulation
+    /*! \defgroup pwm Pulse Width Modulation
       Allows control of 2 independent PWM channels. A limited subset of GPIO pins
       can be connected to one of these 2 channels, allowing PWM control of GPIO pins.
       You have to set the desired pin into a particular Alt Fun to PWM output. See the PWM
@@ -1596,37 +1596,37 @@ extern "C"
       @{
     */
 
-  /*! Sets the PWM clock divisor,
+    /*! Sets the PWM clock divisor,
       to control the basic PWM pulse widths.
       \param[in] divisor Divides the basic 19.2MHz PWM clock. You can use one of the common
       values BCM2835_PWM_CLOCK_DIVIDER_* in \ref bcm2835PWMClockDivider
     */
-  extern void bcm2835_pwm_set_clock(uint32_t divisor);
+    extern void bcm2835_pwm_set_clock(uint32_t divisor);
 
-  /*! Sets the mode of the given PWM channel,
+    /*! Sets the mode of the given PWM channel,
       allowing you to control the PWM mode and enable/disable that channel
       \param[in] channel The PWM channel. 0 or 1.
       \param[in] markspace Set true if you want Mark-Space mode. 0 for Balanced mode.
       \param[in] enabled Set true to enable this channel and produce PWM pulses.
     */
-  extern void bcm2835_pwm_set_mode(uint8_t channel, uint8_t markspace, uint8_t enabled);
+    extern void bcm2835_pwm_set_mode(uint8_t channel, uint8_t markspace, uint8_t enabled);
 
-  /*! Sets the maximum range of the PWM output.
+    /*! Sets the maximum range of the PWM output.
       The data value can vary between 0 and this range to control PWM output
       \param[in] channel The PWM channel. 0 or 1.
       \param[in] range The maximum value permitted for DATA.
     */
-  extern void bcm2835_pwm_set_range(uint8_t channel, uint32_t range);
+    extern void bcm2835_pwm_set_range(uint8_t channel, uint32_t range);
 
-  /*! Sets the PWM pulse ratio to emit to DATA/RANGE,
+    /*! Sets the PWM pulse ratio to emit to DATA/RANGE,
       where RANGE is set by bcm2835_pwm_set_range().
       \param[in] channel The PWM channel. 0 or 1.
       \param[in] data Controls the PWM output ratio as a fraction of the range.
       Can vary from 0 to RANGE.
     */
-  extern void bcm2835_pwm_set_data(uint8_t channel, uint32_t data);
+    extern void bcm2835_pwm_set_data(uint8_t channel, uint32_t data);
 
-  /*! @}  */
+    /*! @}  */
 #ifdef __cplusplus
 }
 #endif

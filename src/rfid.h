@@ -1,8 +1,8 @@
 /*
  * rfid.h
  *
- *  Created on: 06.09.2013
- *      Author: alexs
+ * Created on: 06.09.2013
+ * Author: alexs
  */
 
 #ifndef RFID_H_

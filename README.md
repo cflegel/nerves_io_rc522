@@ -11,14 +11,14 @@ RFID module which can be used to read MIFARE-compatible tags at
 
 Combined with a Raspberry Pi, this makes for a pretty compact RFID
 reader. The RC522 board is so small it easily fits inside most
-raspberry pi cases.
+Raspberry Pi cases.
 
 ![Image of RC522 + Pi](reader.jpg)
 
 
 ## Limitations
 
-Currently, only Raspberry PI is supported as the host platform due to
+Currently, only Raspberry Pi is supported as the host platform due to
 the usage of the [BCM2835](http://www.airspayce.com/mikem/bcm2835/)
 library in the Port driver.
 
